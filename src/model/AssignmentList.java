@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 public class AssignmentList extends AbstractList implements Serializable {
 
-    private ArrayList<AssignmentInterface> aList;
+    private ArrayList<AssignmentAbstract> aList;
 
     public AssignmentList() {
 
     }
 
-    public void addAssignment(AssignmentInterface a) {
+    public void addAssignment(AssignmentAbstract a) {
         /*TODO: add check to see if assignment already exists.
             Validate by comparing name and due date (helper method)
             else, throw AssignmentAlreadyExists Exception
@@ -20,14 +20,14 @@ public class AssignmentList extends AbstractList implements Serializable {
         aList.add(a);
     }
 
-    public void removeAssignment(AssignmentInterface a) {
+    public void removeAssignment(AssignmentAbstract a) {
         /*
         TODO: check to see if assignment is available for removal
          */
         aList.remove(a);
     }
 
-    public boolean doesAssignmentExist(AssignmentInterface a) {
+    public boolean doesAssignmentExist(AssignmentAbstract a) {
         boolean bool = false;
         if (aList.contains(a)) {
             bool = true;
@@ -40,7 +40,7 @@ public class AssignmentList extends AbstractList implements Serializable {
             System.out.println("List is empty");
         }
 
-        for (AssignmentInterface a : aList) {
+        for (AssignmentAbstract a : aList) {
             System.out.println();
         }
     }
